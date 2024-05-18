@@ -5,6 +5,7 @@ const typeDefs = gql`
 # Definine User Type
 type User {
   id: ID!
+  name: String!
   username: String!
   email: String!
   age: Int!
@@ -17,7 +18,6 @@ type Video {
   id: ID!
   title: String!
   description: String
-  url: String!
   postedBy: User!
   views: Int!
   comments: [Comment!]
@@ -42,9 +42,6 @@ type Query {
 
 # Root Mutation Type
 type Mutation {
-  addUser(username: String!, email: String!): User!
-  addVideo(title: String!, description: String, url: String!, userId: ID!): Video!
-  addComment(content: String!, videoId: ID!, userId: ID!): Comment!
 }
 
 `
