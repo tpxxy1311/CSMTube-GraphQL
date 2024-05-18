@@ -2,46 +2,49 @@ const {gql} = require("apollo-server")
 
 const typeDefs = gql`
 
-
+# Definine User Type
 type User {
-    name: String!
-    username: String!
-    age: Int!
-    nationality: String
-    friends: [User!]!
-    favoriteMovies: [Movie!]
+  id: ID!
+  username: String!
+  email: String!
+  age: Int!
+  uploads: [Video!]
+  following: [User!]
 }
 
-type Movie {
-    id: ID!
-    name: String!
-    yearOfPublication: Int!
-    isInTheaters: Boolean!
-  }
-
-type Query{
-    users: [User!]!
-    user(id: ID!) : User
-    movies: [Movie!]!
-    movie(name: String!): Movie
+# Define Video Type
+type Video {
+  id: ID!
+  title: String!
+  description: String
+  url: String!
+  postedBy: User!
+  views: Int!
+  comments: [Comment!]
 }
 
-input CreateUserInput{
-    name: String!
-    username: String!
-    age: Int
-    nationality: String = "Germany"
+# Define Comment Type
+type Comment {
+  id: ID!
+  content: String!
+  postedBy: User!
+  video: Video!
 }
 
-input UpdateUsernameInput {
-    id: ID!
-    newUsername: String!
-  }
+# Root Query Type
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+  videos: [Video!]!
+  video(id: ID!): Video
+  comments(videoId: ID!): [Comment!]!
+}
 
-
-type Mutation{
-    createUser(input: CreateUserInput): User
-    updateUsername(input: UpdateUsernameInput): User
+# Root Mutation Type
+type Mutation {
+  addUser(username: String!, email: String!): User!
+  addVideo(title: String!, description: String, url: String!, userId: ID!): Video!
+  addComment(content: String!, videoId: ID!, userId: ID!): Comment!
 }
 
 `
