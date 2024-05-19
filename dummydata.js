@@ -5,7 +5,7 @@ const Users = [
       username: "max_muster17",
       email: "max.mustermann@csmtube.com",
       age: 30,
-      uploads: [],
+      uploads: 3,
       following: []
     },
     {

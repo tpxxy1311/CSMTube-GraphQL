@@ -10,7 +10,6 @@ type User {
   email: String!
   age: Int!
   uploads: [Video!]
-  following: [User!]
 }
 
 # Define Video Type
@@ -33,16 +32,15 @@ type Comment {
 
 # Root Query Type
 type Query {
-  users: [User!]!
+  users: [User!]
   user(id: ID!): User
-  videos: [Video!]!
+  videos: [Video!]
   video(id: ID!): Video
-  comments(videoId: ID!): [Comment!]!
+  comments(videoId: ID!): [Comment!]
 }
 
 # Root Mutation Type
-type Mutation {
-}
+
 
 `
 
