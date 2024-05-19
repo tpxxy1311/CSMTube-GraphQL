@@ -5,8 +5,6 @@ const Users = [
       username: "max_muster17",
       email: "max.mustermann@csmtube.com",
       age: 30,
-      uploads: 3,
-      following: []
     },
     {
       id: 2,
@@ -14,8 +12,6 @@ const Users = [
       username: "erika.s",
       email: "erika.schulz@csmtube.com",
       age: 25,
-      uploads: [],
-      following: []
     },
     {
       id: 3,
@@ -23,8 +19,6 @@ const Users = [
       username: "davidlee",
       email: "david.lee@csmtube.com",
       age: 42,
-      uploads: [],
-      following: []
     },
     {
       id: 4,
@@ -32,8 +26,6 @@ const Users = [
       username: "anna_kim237",
       email: "anna.kim@csmtube.com",
       age: 28,
-      uploads: [],
-      following: []
     },
     {
       id: 5,
@@ -41,8 +33,6 @@ const Users = [
       username: "dazn_official",
       email: "dazn@csmtube.com",
       age: 35,
-      uploads: [],
-      following: []
     }  
 ]
 
@@ -69,7 +59,6 @@ const Videos = [
     description: "Mit dabei auf unserem Städetrip",
     postedBy: 1,
     views: 20,
-    comments: []
   },
   {
     id: 4,
@@ -77,7 +66,6 @@ const Videos = [
     description: "Einfaches Rezept für ein leckeres Essen",
     postedBy: 3,
     views: 8000,
-    comments: []
   },
   {
     id: 5,
@@ -85,7 +73,6 @@ const Videos = [
     description: "Erster Eindruck und Bewertung",
     postedBy: 3,
     views: 1500,
-    comments: []
   }
 ]
 
