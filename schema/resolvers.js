@@ -4,7 +4,7 @@ const _ = require("lodash")
 const resolvers = {
   //Query Resolvers
   Query: {
-    //User Resolvers
+    //User Resolvers 
     users: () => {
       return Users;
     },

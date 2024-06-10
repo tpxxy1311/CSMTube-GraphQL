@@ -39,9 +39,6 @@ type Query {
   comments(videoId: ID!): [Comment!]
 }
 
-# Root Mutation Type
-
-
 `
 
 module.exports = {typeDefs};
